@@ -6,11 +6,22 @@ Build-Depends: debhelper (>= 5), openjdk-8-jdk-headless, ant (>= 1.7), ant-optio
 Homepage: http://www.scylladb.com
 Standards-Version: 3.9.5
 
+Package: scylla-tools-libs
+Architecture: all
+Description: Common libraries for scylla tools
+
 Package: scylla-tools
 Architecture: all
-Depends: openjdk-8-jre-headless | openjdk-8-jre | oracle-java8-set-default, python (>= 2.7), python-yaml, scylla-conf, ${misc:Depends}, @@BUILD_DEPENDS@@
+Depends: openjdk-8-jre-headless | openjdk-8-jre | oracle-java8-set-default, python (>= 2.7), python-yaml, scylla-conf, scylla-tools-libs, ${misc:Depends}, @@BUILD_DEPENDS@@
 Recommends: ntp | time-daemon
 Conflicts: cassandra
 Description: Scylla database tools
  Scylla is a highly scalable, eventually consistent, distributed,
  partitioned row DB.
+
+Package: scylla-sstableloader
+Architecture: all
+Depends: default-jre-headless | openjdk-8-jre | oracle-java8-set-default, scylla-tools-libs
+Recommends: ntp | time-daemon
+Description: Scylla SSTableloader
+ Tool that loads data from a set of Cassandra SSTables to a Scylla cluster.
