@@ -14,3 +14,10 @@ Conflicts: cassandra
 Description: Scylla database tools
  Scylla is a highly scalable, eventually consistent, distributed,
  partitioned row DB.
+
+Package: scylla-sstableloader
+Architecture: all
+Depends: default-jre-headless | openjdk-8-jre | oracle-java8-set-default
+Recommends: ntp | time-daemon
+Description: Scylla SSTableloader
+ Tool that loads data from a set of Cassandra SSTables to a Scylla cluster.
