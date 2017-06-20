@@ -4,7 +4,6 @@ conf/logback-tools.xml etc/scylla/cassandra
 dist/common/cassandra.in.sh usr/share/scylla/cassandra
 conf/jvm.options etc/scylla/cassandra
 bin/nodetool usr/bin
-bin/scylla-sstableloader usr/bin
 bin/cqlsh usr/bin
 bin/cqlsh.py usr/bin
 bin/sstablescrub usr/bin
