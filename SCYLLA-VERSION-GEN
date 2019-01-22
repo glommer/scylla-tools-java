@@ -10,7 +10,7 @@ else
 	DATE=$(date +%Y%m%d)
 	GIT_COMMIT=$(git log --pretty=format:'%h' -n 1)
 	SCYLLA_VERSION=$VERSION
-	SCYLLA_RELEASE=$DATE.$GIT_COMMIT
+	SCYLLA_RELEASE=1.offlineeval.$DATE.$GIT_COMMIT
 fi
 
 echo "$SCYLLA_VERSION-$SCYLLA_RELEASE"
